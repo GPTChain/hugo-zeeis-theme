@@ -87,8 +87,8 @@
 
 // color
 .zs-hero-cta-button {
-  background-color: var(--primary-color);
+  background-color: #{$sta-dark-primary};
 }
 .zs-hero-cta-alt {
-  color: var(--primary-color);
+  color: #{$sta-dark-primary};
 }

@@ -1,3 +1,3 @@
-module github.com/zeeis/wowchemy-module-zeeis
+module github.com/zeeis/hugo-zeeis-theme
 
 go 1.15
