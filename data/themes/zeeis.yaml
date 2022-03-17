@@ -4,27 +4,27 @@ name: zeeis
 font: minimal
 
 light:
-  primary: "#f0326b"
+  primary: "#3d72b8"
   background: "#efefef"
 
 #  home_section_odd: "transparent"
 #  home_section_even: "transparent"
 
-#  menu_primary: "#efefef"
-  menu_primary: "#313c57"
-  menu_text_active: "#f0326b"
-  menu_text: "#efefef"
-  menu_title: "#efefef"
+  menu_primary: "#efefef"
+  menu_text_active: "#3d72b8"
+  menu_text: "#242424"
+  menu_title: "#242424"
 
 dark:
-  primary: "#f0326b"
-  background: "#0e1521"
+  primary: "#2e88ff"
+  background: "#141414"
 
 #  home_section_odd: "transparent"
 #  home_section_even: "transparent"
 
-  menu_primary: "#1f2532"
-  menu_text_active: "#f0326b"
+  menu_primary: "#242424"
+  menu_text_active: "#2e88ff"
+#  menu_text_active: "#1c3ed3"
   menu_text: "#efefef"
   menu_title: "#efefef"
 

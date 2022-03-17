@@ -1,0 +1,29 @@
+{{$page := .root}}
+{{$title := .page.Title}}
+{{$content := .page.Content}}
+{{$params := .page.Params.zs_hero}}
+
+<div class="zs-hero-wrapper">
+  <h2 class="zs-hero-title">{{$title}}</h2>
+  <div class="zs-hero-content">{{$content}}</div>
+
+  {{if $params.cta }}
+  <div class="zs-hero-actions">
+    <!-- cta button -->
+    {{$attrs := partial "functions/get_a_attrs_parsed" $params.cta.url}}
+    <a class="zs-hero-cta-button" {{$attrs | safeHTMLAttr}}>
+      {{if $params.cta.icon}}
+      {{ $iconClz := partial "functions/get_icon_classes" (dict "icon" $params.cta.icon "pack" $params.cta.icon_pack) }}
+      <i class="{{ $iconClz }} mr-1" aria-hidden="true"></i>
+      {{end}}
+      <span>{{- $params.cta.label | markdownify | emojify | safeHTML -}}</span>
+    </a>
+
+    <!-- cta alt -->
+    {{if and $params.cta.alt_url $params.cta.alt_label}}
+    {{$attrs := partial "functions/get_a_attrs_parsed" $params.cta.alt_url}}
+    <a class="zs-hero-cta-alt" {{$attrs | safeHTMLAttr}}>{{$params.cta.alt_label | markdownify | emojify | safeHTML}}<i class="fas fa-angle-right ml-1"></i></a>
+    {{end}}
+  </div>
+  {{end}}
+</div>
