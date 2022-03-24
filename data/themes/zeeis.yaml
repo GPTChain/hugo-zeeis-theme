@@ -10,7 +10,7 @@ light:
 #  home_section_odd: "transparent"
 #  home_section_even: "transparent"
 
-  menu_primary: "#efefef"
+  menu_primary: "#f9f9f9"
   menu_text_active: "#3d72b8"
   menu_text: "#242424"
   menu_title: "#242424"
@@ -30,6 +30,6 @@ dark:
 
 
 menu_hover: true
-menu_border: false
-menu_shadow: true
+menu_border: true
+menu_shadow: false
 menu_blur: false
