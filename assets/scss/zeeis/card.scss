@@ -1,6 +1,6 @@
 
 .zs-card {
-  min-height: 300px;
+  min-height: 12rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -13,7 +13,7 @@
   }
 
   .zs-card-image {
-    min-height: 200px;
+    min-height: 9rem;
     border-radius: 1rem;
     overflow: hidden;
   }
@@ -91,7 +91,6 @@
     filter: brightness(0.9) saturate(0.3);
   }
 
-
   .zs-card-info > p > a {
     height: 0;
     opacity: 0;
@@ -100,13 +99,11 @@
 
 // transition
 .zs-card-image {
-  transition: .3s transform ease-out,
-  .3s shadow ease-out,
-  .3s filter ease-out;
+  transition: .3s all ease-out;
 }
 
 .zs-card-info {
-  transition: .3s padding ease-in-out;
+  transition: .3s all ease-in-out;
   & p > a {
     transition: .3s all ease-in-out;
   }
