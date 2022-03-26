@@ -21,6 +21,7 @@
   .zs-card-info {
     //outline: 1px solid cornflowerblue;
     padding: 0.5rem;
+
     & > * {
       margin: 0.5rem 0;
 
@@ -44,6 +45,7 @@
 .zs-card-info {
   & > h2, & > p {
     & > a {
+      text-decoration: none;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -76,11 +78,13 @@
       box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
       filter: brightness(1) saturate(1);
     }
+
     .zs-card-info {
       padding: 1rem;
       background-color: rgba(165, 165, 165, 0.2);
       border-radius: 1rem;
     }
+
     .zs-card-info > p > a {
       height: calc(0.8rem * 3 * 1.5);
       opacity: 1;
@@ -88,7 +92,7 @@
   }
 
   .zs-card-image {
-    filter: brightness(0.9) saturate(0.3);
+    filter: brightness(0.8) saturate(0.8);
   }
 
   .zs-card-info > p > a {
@@ -99,13 +103,35 @@
 }
 
 // transition
-.zs-card-image {
-  transition: .3s all ease-out;
+.zs-card {
+  & {
+    .zs-card-image {
+      transition: .3s all ease-out .3s;
+    }
+
+    .zs-card-info {
+      transition: .3s all ease-in-out .3s;
+
+      & p > a {
+        transition: .3s all ease-in-out .3s;
+      }
+    }
+  }
+
+  &:hover {
+
+    .zs-card-image {
+      transition: .3s all ease-out;
+    }
+
+    .zs-card-info {
+      transition: .3s all ease-in-out;
+
+      & p > a {
+        transition: .3s all ease-in-out;
+      }
+    }
+  }
+
 }
 
-.zs-card-info {
-  transition: .3s all ease-in-out;
-  & p > a {
-    transition: .3s all ease-in-out;
-  }
-}
