@@ -1,32 +1,22 @@
 {{/* Override this file to add a custom footer to every page. */}}
 {{/* This partial is included in `layouts/partials/site_footer.html`. */}}
 
-{{ $contact := site.Params.contact }}
-{{ if $contact }}
-<div class="cc-footer-links">
-  {{ $packs := (dict "email" "fas")}}
-  {{ $icons := (dict "email" "envelope") }}
-  {{ range $k, $v := $contact }}
 
-  {{ $href := $v }}
-  {{ if eq $k "email" }}
-    {{ $href = printf "mailto:%s" $v }}
-  {{ end }}
-
-  {{ $icon := $k }}
-  {{ if isset $icons $k }}
-    {{ $icon = index $icons $k }}
-  {{ end }}
-
-  {{ $pack := "fab" }}
-  {{ if isset $packs $k }}
-    {{ $pack = index $packs $k }}
-  {{ end }}
-
+{{ $zsParams := site.Params.zs_params }}
+{{ if $zsParams.footer }}
+<div class="zs-footer">
+  {{ range $section := $zsParams.footer }}
   <div>
-    <a href="{{ $href }}" target="_blank">
-      <i class="{{$pack}} fa-{{$icon}} fa-2x" aria-hidden="true"></i>
-    </a>
+    <div class="zs-footer-section">
+      <h3>{{i18n $section.title | default $section.title}}</h3>
+      <ul>
+        {{ range $label, $url := $section.items }}
+        <li>
+          <a href="{{$url | relLangURL}}" target="_blank">{{ i18n $label | default $label }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
   {{ end }}
 </div>

@@ -1,0 +1,16 @@
+h1 {
+  font-weight: bolder;
+}
+
+.page-footer {
+  background-color: #215dac;
+
+  * {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+.dark {
+  .page-footer {
+    background-color: #07316a;
+  }
+}
