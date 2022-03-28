@@ -11,7 +11,6 @@
   {{ range $index, $post := $paginator.Pages }}
   {{ partial "functions/render_view" (dict "page" $ "item" . "view" ($.Params.view | default "compact") "index" $index) }}
   {{end}}
-
-  {{ partial "pagination" . }}
 </div>
+{{ partial "pagination" . }}
 {{- end -}}
