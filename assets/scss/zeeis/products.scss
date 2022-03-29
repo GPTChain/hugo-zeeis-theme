@@ -1,0 +1,30 @@
+.zs-products-wrapper {
+  align-self: center;
+  padding: 0.01px 0.5rem 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 821px) {
+  .zs-products-wrapper {
+    width: 820px;
+  }
+}
+
+.zs-products-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+  // gutter
+  margin: -0.5rem;
+  & > .article-style {
+    width: 100%;
+  }
+  & > * {
+    margin: 0.5rem !important;
+    flex-grow: 1;
+    min-width: 280px;
+  }
+}
